@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عالم الكيمياء الافتراضي</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #edf5ff;
+  color: #17365d;
+  text-align: center;
+}
+header {
+  background: #174a78;
+  color: white;
+  padding: 35px 15px;
+}
+h1 { font-size: 32px; }
+main { padding: 20px; }
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+  max-width: 1000px;
+  margin: auto;
+}
+.room {
+  background: white;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 3px 12px #ccd8e5;
+}
+.room button {
+  background: #2477a9;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.details {
+  display: none;
+  background: #e1f2ff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+footer {
+  padding: 25px;
+  background: #174a78;
+  color: white;
+  margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🧪 عالم الكيمياء الافتراضي</h1>
+<p>اكتشف الكيمياء، تجوّل، تعلّم، وجرّب بنفسك!</p>
+</header>
+
+<main>
+<h2>🌍 اختر غرفتك وابدأ الاستكشاف</h2>
+
+<div class="rooms">
+
+<div class="room">
+<h2>🌹 كيمياء الورد</h2>
+<p>اكتشف أسرار الألوان والعطور والزهور.</p>
+<button onclick="showRoom(0)">دخول الغرفة</button>
+<div class="details">
+<p>تعرّف على الروائح الطبيعية والأصباغ واستخلاص العطور.</p>
+<p>المشرفة: مشرفة كيمياء الورد</p>
+</div>
+</div>
+
+<div class="room">
+<h2>🩺 كيمياء الصحة</h2>
+<p>اكتشف ارتباط الكيمياء بصحة الإنسان.</p>
+<button onclick="showRoom(1)">دخول الغرفة</button>
+<div class="details">
+<p>تعرّف على مكونات الغذاء والفيتامينات وتركيب جسم الإنسان.</p>
+<p>المشرفة: مشرفة كيمياء الصحة</p>
+</div>
+</div>
+
+<div class="room">
+<h2>💄 كيمياء الجمال</h2>
+<p>اكتشف كيمياء مستحضرات التجميل.</p>
+<button onclick="showRoom(2)">دخول الغرفة</button>
+<div class="details">
+<p>تعرّف على مكونات الصابون والكريمات والعطور.</p>
+<p>المشرفة: مشرفة كيمياء الجمال</p>
+</div>
+</div>
+
+<div class="room">
+<h2>🏡 الكيمياء في حياتنا</h2>
+<p>اكتشف الكيمياء حولك كل يوم.</p>
+<button onclick="showRoom(3)">دخول الغرفة</button>
+<div class="details">
+<p>تعرّف على كيمياء الطبخ والتنظيف والماء والمواد المنزلية.</p>
+<p>المشرف: مشرف الكيمياء اليومية</p>
+</div>
+</div>
+
+<div class="room">
+<h2>🇸🇦 كيمياء السعودية</h2>
+<p>اكتشف إنجازات الكيمياء في وطننا.</p>
+<button onclick="showRoom(4)">دخول الغرفة</button>
+<div class="details">
+<p>تعرّف على الصناعات والابتكارات الكيميائية في المملكة.</p>
+<p>المشرف: مشرف كيمياء السعودية</p>
+</div>
+</div>
+
+</div>
+</main>
+
+<footer>
+<p>عالم الكيمياء الافتراضي | تعلّم واكتشف وابتكر 🧪</p>
+</footer>
+
+<script>
+function showRoom(number) {
+  document.querySelectorAll('.details').forEach((room, index) => {
+    room.style.display =
+      index === number && room.style.display !== 'block'
+      ? 'block' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>
